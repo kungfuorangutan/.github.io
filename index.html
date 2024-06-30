@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCL Movement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .close-btn {
+            font-size: 1em; /* Reverted to normal size */
+            cursor: pointer;
+        }
+        .content-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+        .item-title {
+            flex: 1;
+            font-weight: bold;
+        }
+        .item-description {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="side-bar left">
+        <div class="bar-text silkscreen-regular">KCL MOVEMENT PERSONAL TRAINING</div>
+    </div>
+    <div class="top-bar">
+        <div class="bar-text silkscreen-regular">KCL MOVEMENT PERSONAL TRAINING</div>
+    </div>
+    <div class="content" id="content-section">
+        <div class="image-container">
+            <img src="sighold.jpg" alt="Kevin" class="profile-image">
+        </div>
+        <div class="text-container">
+            <h1>Hi, I’m Kevin,</h1>
+            <p>I'm a queer, trauma informed personal trainer (he/him), working to create spaces where everyone in every body — trans folk, non-binary folk, queer folk, folks in larger bodies, and folks with disabilities — can feel safe, move better, and get stronger.</p>
+            <br>
+            <ul class="links">
+                <li><span class="number">01 / </span><a href="#" id="show-values">my values</a></li>
+                <li><span class="number">02 / </span><a href="#" id="show-services">services</a></li>
+                <li><span class="number">03 / </span><a href="https://docs.google.com/forms/d/1vFkrVTURNdSbC5ZNmTXo-aM6_0I1ME8UNqqe51XRfVo/edit">work with me</a></li>
+                <li><span class="number">04 / </span><a href="mailto:kevinl.klee@googlemail.com">contact me</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="values-box" class="values-box">
+        <div class="box-content content-box">
+            <span class="close-btn" id="close-btn-values">&times;</span>
+            <h2>My Values</h2>
+            <div class="item">
+                <div class="item-title">Focus on You</div>
+                <div class="item-description">My goal is to help you feel stronger and more powerful. I believe in affirming coaching, where you can show up as you are.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Consent</div>
+                <div class="item-description">You control the pace and intensity. I will always ask for consent before cuing you, and you can revoke it at any time.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Accessibility</div>
+                <div class="item-description">I strive to make my coaching accessible to as many people as possible, including pricing.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Progress</div>
+                <div class="item-description">I will continue to learn how to support you. Your feedback is invaluable in helping me improve.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Inclusivity</div>
+                <div class="item-description">I work with queer folks in a supportive environment that overcomes fitness industry norms and celebrates all the things your body can do.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Functional</div>
+                <div class="item-description">We focus on preparing your body for your demands, prioritising strength, coordination & mobility for a healthy, active lifestyle.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Trauma-Informed</div>
+                <div class="item-description">I take a trauma-informed approach, promoting well-being. I work with a charted psychologist to provide this.</div>
+            </div>
+        </div>
+    </div>
+    <div id="services-box" class="values-box">
+        <div class="box-content content-box">
+            <span class="close-btn" id="close-btn-services">&times;</span>
+            <h2>Services</h2>
+            <div class="item">
+                <div class="item-title">Personal Training</div>
+                <div class="item-description">One-on-one sessions tailored to your needs and goals, whether in-person or online.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Group Classes</div>
+                <div class="item-description">Inclusive group classes designed to foster a sense of community and mutual support.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Online Programs</div>
+                <div class="item-description">Customizable online training programs that you can follow at your own pace.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Consultations</div>
+                <div class="item-description">Initial consultations to assess your needs, set goals, and design a personalized fitness plan.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Specialized Training</div>
+                <div class="item-description">Programs designed for specific populations, including those with disabilities, larger bodies, or those recovering from trauma.</div>
+            </div>
+            <div class="item">
+                <div class="item-title">Signposting</div>
+                <div class="item-description">I also work with a qualified chartered psychologist and therapist who is available for signposting on to appropriate services, and advice.</div>
+            </div>
+        </div>
+    </div>
+    <div class="side-bar right">
+        <div class="bar-text silkscreen-regular">KCL MOVEMENT PERSONAL TRAINING</div>
+    </div>
+    <div class="bottom-bar">
+        <div class="bar-text silkscreen-regular">KCL MOVEMENT PERSONAL TRAINING</div>
+    </div>
+    <script>
+        document.getElementById('show-values').onclick = function() {
+            document.getElementById('values-box').style.display = 'block';
+        };
+        document.getElementById('close-btn-values').onclick = function() {
+            document.getElementById('values-box').style.display = 'none';
+        };
+        document.getElementById('show-services').onclick = function() {
+            document.getElementById('services-box').style.display = 'block';
+        };
+        document.getElementById('close-btn-services').onclick = function() {
+            document.getElementById('services-box').style.display = 'none';
+        };
+    </script>
+</body>
+</html>

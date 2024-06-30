@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Flexa Mono';
+    src: url('path/to/GT-Flexa-Mono.woff2') format('woff2'), 
+         url('path/to/GT-Flexa-Mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Flexa Cond';
+    src: url('path/to/GT-Flexa-Cond.woff2') format('woff2'), 
+         url('path/to/GT-Flexa-Cond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GT Flexa Mono', monospace; /* Changed to GT Flexa Mono for the main body */
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffae5; /* Background color */
+    color: #1a262b; /* Font color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'GT Flexa Cond', sans-serif; /* GT Flexa Cond for headers */
+}
+
+.side-bar, .top-bar, .bottom-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Silkscreen', sans-serif; /* Silkscreen font for bars */
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: normal;
+    position: absolute;
+}
+
+.side-bar.left {
+    background-color: #fae814; /* Yellow background */
+    color: #ff4f00; /* Orange text */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px; /* Adjusted to half the previous width */
+    height: 100vh;
+}
+
+.side-bar.right {
+    background-color: #0000ff; /* Blue background */
+    color: #fae814; /* Yellow text */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px; /* Adjusted to half the previous width */
+    height: 100vh;
+}
+
+.top-bar {
+    background-color: #1a262b; /* Black background */
+    color: #ffffff; /* White text */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* Adjusted to half the previous height */
+    width: 100%;
+}
+
+.bottom-bar {
+    background-color: #ff4f00; /* Orange background */
+    color: #ffffff; /* White text */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* Adjusted to half the previous height */
+    width: 100%;
+}
+
+.bar-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar .bar-text, .bottom-bar .bar-text {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin-top: 60px; /* Adjusted for the top bar */
+    margin-bottom: 60px; /* Adjusted for the bottom bar */
+}
+
+.image-container {
+    flex: 1;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 0; /* Removed border-radius */
+}
+
+.text-container {
+    flex: 2;
+    max-width: 600px;
+}
+
+.text-container h1 {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #1a262b; /* Font color */
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #1a262b; /* Font color */
+}
+
+.links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a262b; /* Font color */
+    font-family: 'GT Flexa Mono', monospace; /* Main body font */
+    font-weight: bold;
+}
+
+.number {
+    font-weight: bold;
+    color: #1a262b; /* Font color */
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.links li a {
+    color: #1a262b; /* Font color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links li a:hover {
+    text-decoration: none; /* No underline on hover */
+}
+
+.values-box {
+    display: none;
+    width: 70%; /* Fill 60% of the screen width */
+    height: 70%; /* Fill 60% of the screen height */
+    padding: 30px;
+    background-color: #fffae5;
+    border: 2px solid #1a262b;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    font-family: 'GT Flexa Mono', monospace; /* GT Flexa Mono for value box */
+}
+
+.values-box .box-content {
+    position: relative;
+}
+
+.values-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.values-box h2 {
+    margin-top: 0;
+}
+
+.values-box ul {
+    padding-left: 20px;
+}
